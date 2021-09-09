@@ -12,16 +12,9 @@
   align-items: center;
   justify-content: center;
 }
-@mixin borderRadius($par){
-  border-radius: $par;
-  -webkit-transition: $par;
-  -moz-transition: $par;
-  -o-transition: $par;
-}
+
 *{
-  margin: 0;
-  padding: 0;
-  border: 0;
+  
   box-sizing: border-box;
 }
 //color
@@ -42,7 +35,7 @@ body {
 
 .btn {
   background-color: $bg-color-3;
-  @include borderRadius(5px);
+  border-radius: 5px;
   color: $bg-color-1;
   border: none;
   margin: 1rem;
