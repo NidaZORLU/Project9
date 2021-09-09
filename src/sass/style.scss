@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+//Mixins
+@mixin transitionEffect($par){
+  transition: $par all;
+  -webkit-transition: $par all;
+  -moz-transition: $par all;
+  -o-transition: $par all;
+}
+@mixin centerFlex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin borderRadius($par){
+  border-radius: $par;
+  -webkit-transition: $par;
+  -moz-transition: $par;
+  -o-transition: $par;
+}
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+//color
+$bg-color-1 : #fff;
+$bg-color-2:rgb(161, 100, 223);
+$bg-color-3: rebeccapurple;
+
+body {
+  background-color: $bg-color-2;
+  font-family: 'Poppins', sans-serif;
+  @include centerFlex;
+  flex-wrap: wrap;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.btn {
+  background-color: $bg-color-3;
+  @include borderRadius(5px);
+  color: $bg-color-1;
+  border: none;
+  margin: 1rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:focus {
+  outline: none;
+}
